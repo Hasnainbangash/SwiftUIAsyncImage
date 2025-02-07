@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    private let imageURL: String = "https://credo.academy/creado-academy@3x.png"
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        
+        // MARK: - 1. BASIC
+        
+        AsyncImage(url: URL(string: imageURL))
+        
     }
 }
 
