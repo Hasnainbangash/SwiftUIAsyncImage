@@ -76,8 +76,9 @@ struct ContentView: View {
             case .success(let image):
                 image
                     .imageModifier()
-                    //.transition(.move(edge: .bottom))
-                    .transition(.slide)
+                    //.transition(.move(edge: .bottom)) // Image cames from the bottom
+                    //.transition(.slide) // Image cames from the left
+                    .transition(.scale) // The spring animation
             case .failure(_):
                 Image(systemName: "ant.circle.fill").iconModifier()
             case .empty:
