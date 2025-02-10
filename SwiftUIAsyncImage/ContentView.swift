@@ -76,7 +76,8 @@ struct ContentView: View {
             case .success(let image):
                 image
                     .imageModifier()
-                    .transition(.move(edge: .bottom))
+                    //.transition(.move(edge: .bottom))
+                    .transition(.slide)
             case .failure(_):
                 Image(systemName: "ant.circle.fill").iconModifier()
             case .empty:
